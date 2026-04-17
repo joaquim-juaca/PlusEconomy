@@ -1,0 +1,96 @@
+{
+  "theme": "Light & Dark (Toggle)",
+  "archetype": "Archetype 1 (Organic & Earthy)",
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Satoshi",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed font-medium",
+      "overline": "uppercase tracking-[0.2em] text-xs font-bold"
+    }
+  },
+  "colors": {
+    "light": {
+      "background": "#FDFCF8",
+      "surface": "#FFFFFF",
+      "primary": "#285943",
+      "primary_hover": "#1E4232",
+      "accent": "#E06D4F",
+      "accent_hover": "#C95A3E",
+      "text_main": "#1A1D1A",
+      "text_muted": "#6E7370",
+      "border": "#EBE8E0",
+      "success": "#3A7D5C",
+      "warning": "#E0A94F",
+      "danger": "#D64C4C"
+    },
+    "dark": {
+      "background": "#121413",
+      "surface": "#1A1D1B",
+      "primary": "#3A7D5C",
+      "primary_hover": "#4C9974",
+      "accent": "#E06D4F",
+      "accent_hover": "#E88A73",
+      "text_main": "#FDFCF8",
+      "text_muted": "#9CA39F",
+      "border": "#2D3330",
+      "success": "#4C9974",
+      "warning": "#E8B868",
+      "danger": "#E06565"
+    }
+  },
+  "spacing_and_layout": {
+    "padding_scale": "p-4, p-6, p-8, p-12 (Use generous spacing, minimum p-6 for padded cards)",
+    "container_borders": "Cards must have internal padding (p-6) to prevent text collision. Use 1px subtle borders instead of heavy shadows.",
+    "border_radius": "rounded-2xl for main cards, rounded-full for buttons/pills to feel organic.",
+    "mobile_first": "Images max-h-[80vh] on mobile. Stack components. Grid cols-1 on mobile."
+  },
+  "surface_strategies": {
+    "cards": "Neumorphism (Tactile) - Flat background, 1px subtle border, no shadow by default. On hover: slight lift (-translate-y-1), subtle shadow, border color darkens.",
+    "header": "Glassmorphism (Optical Clarity) - backdrop-blur-xl with high opacity (bg-white/80 light, bg-black/60 dark). 1px delicate inner stroke.",
+    "buttons": "Primary buttons: Pill shape (rounded-full), solid primary color. Secondary: Outline with transparent background, solid border."
+  },
+  "components": {
+    "navigation": "Sticky top nav with backdrop-blur. Logo left, links center, CTA right. Hamburger menu for mobile.",
+    "dashboard_grid": "Mode B (Control Room Grid). Tight gaps (gap-6). Use col-span-1 for summary metrics, col-span-2 or 3 for main charts.",
+    "charts": "Use Recharts or Shadcn charts. Transparent background, crisp lines. Use primary and accent colors for data series.",
+    "forms": "Use Shadcn Form, Input, Select. Customize to use rounded-xl, organic borders.",
+    "toggle": "Bilingual (PT/EN) and Theme (Dark/Light) toggles in header or profile dropdown."
+  },
+  "motion_and_interactions": {
+    "hover_states": "All buttons and cards must have hover states. Lighter hue for active state. MUST explicitly set text color on hover.",
+    "transitions": "transition-all duration-300 ease-in-out",
+    "page_load": "Framer motion staggered entrance for dashboard cards and lists."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Clean, line-based, consistent stroke width (1.5px or 2px)."
+  },
+  "media": {
+    "images": {
+      "hero_landing": {
+        "url": "https://images.unsplash.com/photo-1758273237921-52fc1a8de7aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBsb29raW5nJTIwYXQlMjBwaG9uZSUyMHNtaWxpbmclMjBvdXRkb29yc3xlbnwwfHx8fDE3NzY0NDUzNTl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Young woman in yellow coat using smartphone outdoors - represents target audience (young adults) engaging with the app happily."
+      },
+      "abstract_background": {
+        "url": "https://images.pexels.com/photos/6789297/pexels-photo-6789297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Abstract warm sand texture - use for premium section backgrounds or organic soft textures on landing page."
+      }
+    }
+  },
+  "testing": {
+    "data_testid": "MANDATORY for all interactive elements (buttons, inputs, toggles, links) using kebab-case role-based names."
+  },
+  "instructions_to_main_agent": [
+    "Implement bilingual support (PT-BR/EN) using a context or standard i18n approach.",
+    "Dark/Light theme toggle must switch the CSS variables defined in colors.",
+    "Freemium vs Premium features must be visually distinct. Premium features should be marked with a small subtle 'Premium' badge or the Accent color (Terracotta).",
+    "Ensure gamification elements (metas/conquistas) use progress bars with the Accent color for high energy.",
+    "Avoid standard Vercel/Shadcn look. Strip default shadows, use the defined 1px borders and specific fonts.",
+    "Use framer-motion for smooth staggered list animations on the dashboard.",
+    "For the Landing Page CTA, ensure high contrast and use the Accent color to drive conversion."
+  ]
+}
